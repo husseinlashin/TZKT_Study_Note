@@ -57,19 +57,30 @@ def get(html):
             r = requests.get(link, headers=headers)
             r.encoding = 'gbk'
             html = etree.HTML(r.text, etree.HTMLParser())
-            requirement = html.xpath("/html/body/div[3]/div[2]/div[3]/div[1]/div/p/text()")
+            global requirement
+            # 打开几个上面两个连接比较发现
+            # 有些岗位职责是放在p标签里面，有些放在div标签里面，
+            # 如果放在p标签里面,后面同级下虽然还有div标签，但是最多只有三个
+            # 如果有p标签为真,采用第一种提取方法，如果有第四个div标签，则使用第二种方法
+            if html.xpath("/html/body/div[3]/div[2]/div[3]/div[1]/div/p"):
+                requirement = html.xpath("/html/body/div[3]/div[2]/div[3]/div[1]/div/p/text()")
+            if html.xpath("/html/body/div[3]/div[2]/div[3]/div[1]/div/div[4]"):
+                requirement = html.xpath("/html/body/div[3]/div[2]/div[3]/div[1]/div/div/text()")
+            else:
+                pass
+            # 提取的信息时一个列表，将列表所有内容转换为字符串
             work = ''.join(requirement)
             return work
 
-        # work = parse_body(link)
-        item.append(name + '    ' + company + '    ' + address + '    ' + date + '    ' + link)
-        # item.append(name + '  ' + company + '  ' + address + '  ' + date + '  ' + link + '  ' + work )
+        work = parse_body(link)
+        # item.append(name + '    ' + company + '    ' + address + '    ' + date + '    ' + link)
+        item.append(name + '  ' + company + '  ' + address + '  ' + date + '  ' + link + '\n' + work )
 
     return item
 
 # 3. 将提取的item写入到文件
 def write_file():
-    for i in range(1, 34):
+    for i in range(1, 2):
         get_content(i)
         html = get_html(i)
         item = get(html)
