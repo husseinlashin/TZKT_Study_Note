@@ -34,7 +34,7 @@ def download_video(url):
     for i in url_names:
         # 有些视频链接下载保存为文件时候会出错，文件命名有些字符禁止使用
         try:
-            # urlretrieve用于下载文件
+            # urlretrieve用于下载文件,传入参数url，存储路径及文件名
             urllib.request.urlretrieve(i[1], r'D:\Hello World\python_download\budejie_videos\%s.mp4' % i[0])
             # 缓慢下载，设置延时
             time.sleep(0.5)
