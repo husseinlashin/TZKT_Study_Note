@@ -19,13 +19,14 @@ def get_content(i):
     r = requests.get(url, headers=headers)
     # 网页源码使用的gbk，charset='gbk'，该处进行解码
     r.encoding = 'gbk'
-    # 返回网页源码,是一个字符串
+    # 返回网页源码,是一个字符串类型
     return r.text
 
 
-# 2. 补充一步，将上面的text字符串转化为XPath可以解析的对象
+# 2. 补充一步，将上面的requests.get得到的text字符串转化为XPath可以解析的对象
 def get_html(i):
     text = get_content(i)
+    # 解析requests.get获得的源码转化为XPath可以解析的对象
     html = etree.HTML(text,etree.HTMLParser())
     return html
 
@@ -33,9 +34,11 @@ def get_html(i):
 # item用来存储每一个工作的所有信息，由于要循环爬取多个页面，因此item放在最外层
 item = []
 def get(html):
+    # 先提取一页中所有岗位所在的标签
     jobs = html.xpath(".//div[@id='resultList']//div[@class='el']")
     for job in jobs:
         # 匹配结果仍然是一个列表类型,列表中只有一个元素，提取元素并去掉里面的空格
+        # scrapy使用的selector中不能用这种[0].strip()列表语法，使用extract(),extract_first()提取第一个列表元素
         name = job.xpath("./p/span/a/text()")[0].strip()
         link = job.xpath("./p/span/a/@href")[0].strip()
         company = job.xpath("./span[1]/a/text()")[0].strip()
@@ -62,6 +65,7 @@ def get(html):
             # 有些岗位职责是放在p标签里面，有些放在div标签里面，
             # 如果放在p标签里面,后面同级下虽然还有div标签，但是最多只有三个
             # 如果有p标签为真,采用第一种提取方法，如果有第四个div标签，则使用第二种方法
+            # 提取标签里面所有的文字
             if html.xpath("/html/body/div[3]/div[2]/div[3]/div[1]/div/p"):
                 requirement = html.xpath("/html/body/div[3]/div[2]/div[3]/div[1]/div/p/text()")
             if html.xpath("/html/body/div[3]/div[2]/div[3]/div[1]/div/div[4]"):
@@ -73,7 +77,6 @@ def get(html):
             return work
 
         work = parse_body(link)
-        # item.append(name + '    ' + company + '    ' + address + '    ' + date + '    ' + link)
         item.append(name + '  ' + company + '  ' + address + '  ' + date + '  ' + link + '\n' + work )
 
     return item

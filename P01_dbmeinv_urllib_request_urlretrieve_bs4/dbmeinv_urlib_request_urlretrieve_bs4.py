@@ -1,4 +1,4 @@
-# -*- coding:utf-8 -*-
+# -*- coding: utf-8 -*-
 # date: 2019.04.12
 
 # 爬取www.dbmeinv.com网站所有的第一层页面的图片

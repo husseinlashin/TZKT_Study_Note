@@ -29,7 +29,16 @@ def parse_body(link):
     else:
         pass
     # 提取的信息时一个列表，将列表所有内容转换为字符串
+    print(requirement)
     work = ''.join(requirement)
+    '''
+    work = work.strip()
+    work = work.replace(' ', '')
+    work = work.replace("\r", "")
+    work = work.replace("\n", "")
+    work = work.replace("\t", "")
+    '''
+
     print(work)
 
 for link in links:
