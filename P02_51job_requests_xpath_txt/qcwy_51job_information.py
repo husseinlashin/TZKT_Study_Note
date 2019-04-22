@@ -27,6 +27,7 @@ def get_content(i):
 def get_html(i):
     text = get_content(i)
     # 解析requests.get获得的源码转化为XPath可以解析的对象
+    # 转换之后html类型：<class 'lxml.etree._Element'>
     html = etree.HTML(text,etree.HTMLParser())
     return html
 

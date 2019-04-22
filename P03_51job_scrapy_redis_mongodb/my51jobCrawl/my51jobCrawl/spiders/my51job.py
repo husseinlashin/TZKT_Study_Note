@@ -13,7 +13,9 @@ class My51jobSpider(CrawlSpider):
 
     # 网页提取规则可使用正则或者xpath，
     # 参考Spider_development_study_note中网页解析验证中的文件my51job_rules_allow_use_xpath_1.py
-
+    # 注意extract()结果是一个列表，extract_first()提取列表中第一个元素
+    # 提取li标签中最后一个元素使用li[last()]，倒数第二个li[last()-1]
+    # 使用XPATH提取连接，只需要写到连接所在的标签即可
     rules = (
         Rule(LinkExtractor(restrict_xpaths='/html/body/div[2]/div[4]/div[55]/div/div/div/ul/li[last()]/a'),
              callback='parse_job_list', follow=True),

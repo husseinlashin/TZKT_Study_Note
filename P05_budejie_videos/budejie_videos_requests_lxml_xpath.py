@@ -47,7 +47,7 @@ def download_video(url):
 # 获取每一页页面的地址，调用上面的方法，下载每一页的所有视频
 def download_videos():
     # 提取每一页的连接，规律相同，网页最后一个数字不同
-    for page in range(0, 5):
+    for page in range(0, 10):
         page += 1
         url = 'http://www.budejie.com/video/%s' % page
         print("正在下载第%s页的所有视频......" % page)
