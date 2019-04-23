@@ -3,6 +3,7 @@
 # 读取txt文档中的IP地址，写入列表
 # 免费公开高匿可用IP：http://www.shenjidaili.com/open/
 # 设置随机代理
+# 随机代理一直循环请求，直到请求成功
 
 import user_agent
 import requests
@@ -26,7 +27,7 @@ with open('ip_proxy_xici.txt', mode='r', encoding='utf-8') as f:
 # print(ip_pool)
 
 def test_proxies():
-    test_url = "https://www.hao123.com/"
+    test_url = "http://www.ifeng.com/"
 
     # 设置代理IP池
     proxy = ip_pool
@@ -34,20 +35,22 @@ def test_proxies():
     user_agents = user_agent.generate_user_agent()
     headers = {'User-Agent': user_agents}
     # 使用IP池随机代理,不断请求，直到请求成功
-    try:
-        while True:
-            res = requests.get(url=test_url, headers=headers, proxies=random.choice(proxy), timeout=1)
+    # timeout超时设长一点，代理IP的网速很慢，延时短了，会直接抛出异常
+    # HTTP都是基于TCP的socket的，经常会抛出异常的。异常了肯定没有返回码
+    # 因此try-except语句要放在while循环里面，这样就算异常还是会继续循环请求
+    while True:
+        try:
+            res = requests.get(url=test_url, headers=headers, proxies=random.choice(proxy), timeout=3)
             if res.status_code == 200:
-                print("该IP地址有效,网页请求成功")
+                print("IP地址有效，请求成功")
                 break
             else:
-                pass
-    except Exception:
-        pass
+                print("IP地址失效，继续请求")
+        # 捕获异常
+        except Exception as e:
+            print("请求异常：")
+            print(e)
 
 if __name__ == '__main__':
-    # 加入while死循环，一直随机请求
-    # while True:
-    # test_proxies()
     print(ip_pool)
     test_proxies()
