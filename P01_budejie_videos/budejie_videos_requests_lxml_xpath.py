@@ -2,8 +2,14 @@
 
 # 爬取百思不得姐网站的视频：http://www.budejie.com/video
 # 分析网站，发现是静态网站，视频分页显示，http://www.budejie.com/video/1，最后数字就是页码
-# 1. 获取源码；2. 解析得到一页视频列表里面所有视频标题及对应视频链接；
-# 3. 下载视频以标题命名；4. 调用一页视频下载的方法下载所有页面视频
+# 1. 获取源码；
+# 2. 解析得到一页视频列表里面所有视频标题及对应视频链接；
+# 3. 下载视频以标题命名；
+# 4. 调用一页视频下载的方法下载所有页面视频
+
+# 注意：查看网页元素有些源代码查看不到，直接右键查看源代码，网页获取的源码也是源代码
+# 可以对比查看查看网页元素和源码，发现data-mp4在查看元素中找不到，但是网页源码里面且有
+# 可以对比网站分析1和网站分析2图片
 
 import urllib.request
 import time
@@ -16,12 +22,14 @@ def download_video(url):
     headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:66.0) Gecko/20100101 Firefox/66.0'}
     res = requests.get(url, headers=headers)
     # 查看源码meta标签，使用的是utf-8编码
+    # 注意，encoding不能放在get请求参数中
     res.encoding = 'utf-8'
     # 获取源码,文档类型为字符串，P02中使用XPATH解析，需要转换
     html = etree.HTML(res.text, etree.HTMLParser())
-    # print(type(html))
+    # print(type(html))，
     videos = html.xpath(".//div[@class='j-r-list-c']")
     # 每一页第一个j-r-list-c标签没有视频，直接排出掉，后面if判断也可，代码太多
+    #
     url_names = []
     for video in videos[1:]:
         # 提取出标题和对应的视频url,提取列表第一个元素并去掉字符两端的空格
@@ -47,7 +55,7 @@ def download_video(url):
 # 获取每一页页面的地址，调用上面的方法，下载每一页的所有视频
 def download_videos():
     # 提取每一页的连接，规律相同，网页最后一个数字不同
-    for page in range(0, 10):
+    for page in range(0, 2):
         page += 1
         url = 'http://www.budejie.com/video/%s' % page
         print("正在下载第%s页的所有视频......" % page)

@@ -20,13 +20,16 @@ def download_video(url):
     # print(type(html))
     # 使用re找出所有的视频所在的标签
     # 编写一个正则匹配对象,注意参数re.S,表示把html当做一个整体字符串，忽略其中的换行符\n，
-    # 如果不使用re.S，则会逐行匹配，.*?找到一个满足要求的即可，最小匹配模式
+    # .*?是非贪婪模式，找到一个满足要求的即可，最小匹配模式
+    # 我们查看源码，发现从<div class="j-r-list-c">开始，只需要匹配到第二个</div>就可以包括了标题和视频地址所在的内容
     pattern = re.compile(r'(<div class="j-r-list-c">.*?</div>.*?</div>)', re.S)
+    # 整个源码匹配查找出我们所需要的每一部分内容，返回结果是一个列表
     url_contents = re.findall(pattern, html)
     # 遍历列表，提取标题和视频链接地址
     url_name = []
     for i in url_contents:
         # 有些列表中可能没有视频，所以先找出有视频的内容,提取出链接地址
+        # 正则表达式里面使用了小括号编组，匹配返回的结果只有编组里面的内容，即返回URL地址
         video_pattern = r'data-mp4="(.*?)"'
         # 每个i依次匹配，返回值是一个列表，如果没有内容则是一个空列表
         video_url = re.findall(video_pattern, i)
