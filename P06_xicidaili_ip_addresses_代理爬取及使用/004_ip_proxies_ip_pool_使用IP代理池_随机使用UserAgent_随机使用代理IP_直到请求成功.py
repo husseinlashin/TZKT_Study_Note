@@ -8,7 +8,6 @@
 import user_agent
 import requests
 import random
-import time
 
 # 设置用于存放IP地址的空列表
 ip_pool = []
@@ -24,10 +23,10 @@ with open('ip_proxy_xici.txt', mode='r', encoding='utf-8') as f:
         # 将IP转换成requests参数proxies规定的格式，字典键值形式
         i_dict = {'http': 'http://' + i, 'https': 'https://' + i}
         ip_pool.append(i_dict)
-# print(ip_pool)
+
 
 def test_proxies():
-    test_url = "http://www.ifeng.com/"
+    test_url = "http://www.baidu.com/"
 
     # 设置代理IP池
     proxy = ip_pool
@@ -42,7 +41,7 @@ def test_proxies():
         try:
             res = requests.get(url=test_url, headers=headers, proxies=random.choice(proxy), timeout=3)
             if res.status_code == 200:
-                print("IP地址有效，请求成功")
+                print("IP地址有效，请求成功，IP地址：%s" % )
                 break
             else:
                 print("IP地址失效，继续请求")
@@ -50,6 +49,7 @@ def test_proxies():
         except Exception as e:
             print("请求异常：")
             print(e)
+
 
 if __name__ == '__main__':
     print(ip_pool)

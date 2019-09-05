@@ -15,6 +15,7 @@ def crawl_xicidaili():
     # 用于存储有效IP地址的空列表
     global ip_list
     ip_list = []
+    # 爬取20页的代理IP地址
     for i in range(1, 20):
         start_url = 'https://www.xicidaili.com/nn/{}'.format(i)
         # 随机生成用户代理,每次请求都会变化

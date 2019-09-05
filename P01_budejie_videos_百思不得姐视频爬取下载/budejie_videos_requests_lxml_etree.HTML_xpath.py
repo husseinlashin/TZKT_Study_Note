@@ -24,7 +24,7 @@ def download_video(url):
     # 查看源码meta标签，使用的是utf-8编码
     # 注意，encoding不能放在get请求参数中
     res.encoding = 'utf-8'
-    # 获取源码,文档类型为字符串，P02中使用XPATH解析，需要转换
+    # 获取源码,文档类型为字符串，该处和P02中使用XPATH解析，需要转换etree.HTML进行转换，才能用xpath
     html = etree.HTML(res.text, etree.HTMLParser())
     # print(type(html))，
     videos = html.xpath(".//div[@class='j-r-list-c']")
