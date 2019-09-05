@@ -41,7 +41,7 @@ def test_proxies():
         try:
             res = requests.get(url=test_url, headers=headers, proxies=random.choice(proxy), timeout=3)
             if res.status_code == 200:
-                print("IP地址有效，请求成功，IP地址：%s" % )
+                print("IP地址有效，请求成功，IP地址：%s")
                 break
             else:
                 print("IP地址失效，继续请求")
