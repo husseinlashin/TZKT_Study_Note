@@ -29,12 +29,12 @@ def download_video(url):
     # print(type(html))，
     videos = html.xpath(".//div[@class='j-r-list-c']")
     # 每一页第一个j-r-list-c标签没有视频，直接排出掉，后面if判断也可，代码太多
-    #
+
     url_names = []
     for video in videos[1:]:
-        # 提取出标题和对应的视频url,提取列表第一个元素并去掉字符两端的空格
+        # 提取出标题和对应的视频url,提取的结果是一个列表，直接取出第一个元素并去掉字符两端的空格
         title = video.xpath("./div[1]/a[1]/text()")[0].strip()
-        video_url = video.xpath("./div[2]/div[1]/@data-mp4")[0].strip()
+        video_url = video.xpath("./div[2]/div[1]/@data-mp4")[0].strip() # @data-mp4获取该属性对应的值
         # print(title, video_url)
         url_name = [title, video_url]
         url_names.append(url_name)
