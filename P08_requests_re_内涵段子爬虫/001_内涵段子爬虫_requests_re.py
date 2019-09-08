@@ -41,7 +41,7 @@ class Neihan():
         i = 1
         while True:
             i += 1
-            # 重复上面的1234步骤
+            # 重复上面的1234步骤，爬取每一页
             next_page_url = self.get_next_page_url(i)
             html_str = self.parse_url(next_page_url)
             content_list = self.get_page_content(html_str)
