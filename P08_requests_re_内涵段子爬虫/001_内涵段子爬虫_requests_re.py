@@ -7,8 +7,7 @@ import re
 class Neihan():
     def __init__(self):
         self.start_url = "http://www.neihanshu.net/text/index.html"
-        self.headers = {
-            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36"}
+        self.headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36"}
 
     def parse_url(self, url):
         response = requests.get(url=url, headers=self.headers)
