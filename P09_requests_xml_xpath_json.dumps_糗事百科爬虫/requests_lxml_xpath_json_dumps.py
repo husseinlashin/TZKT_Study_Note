@@ -27,19 +27,25 @@ class QiushiSpider():
         for div in div_list:
             item = dict()
             # 提取文字内容，文字内容有很多换行符，我们替换删除掉
-            item["content"] = div.xpath(".//div[@class='content']/span[1]/text()")
+            item["content"] = div.xpath(
+                ".//div[@class='content']/span[1]/text()")
             item["content"] = [i.replace("\n", "") for i in item["content"]]
             # 提取作者性别,<div class="articleGender womenIcon">26</div>
-            item["author_gender"] = div.xpath(".//div[contains(@class, 'articleGender')]/@class")
+            item["author_gender"] = div.xpath(
+                ".//div[contains(@class, 'articleGender')]/@class")
             # 空格分隔后，去掉Icon就是性别，后面的if用于判断是否有值，没有就赋值None
-            item["author_gender"] = item["author_gender"][0].split(" ")[-1].replace("Icon", "") if len(
-                item["author_gender"]) > 0 else None
+            item["author_gender"] = item["author_gender"][0].split(
+                " ")[-1].replace("Icon", "") if len(item["author_gender"]) > 0 else None
             # 提取年龄
-            item["author_age"] = div.xpath(".//div[contains(@class, 'articleGender')]/text()")
-            item["author_age"] = item["author_age"][0] if len(item["author_age"]) > 0 else None
+            item["author_age"] = div.xpath(
+                ".//div[contains(@class, 'articleGender')]/text()")
+            item["author_age"] = item["author_age"][0] if len(
+                item["author_age"]) > 0 else None
             # 提取用户头像
-            item["author_img"] = div.xpath(".//div[@class='author clearfix']//img/@src")
-            item["author_img"] = "https:" + item["author_img"][0] if len(item["author_img"]) > 0 else None
+            item["author_img"] = div.xpath(
+                ".//div[@class='author clearfix']//img/@src")
+            item["author_img"] = "https:" + \
+                item["author_img"][0] if len(item["author_img"]) > 0 else None
             content_list.append(item)
         return content_list
 
@@ -68,3 +74,4 @@ class QiushiSpider():
 if __name__ == "__main__":
     qiushi = QiushiSpider()
     qiushi.run()
+
