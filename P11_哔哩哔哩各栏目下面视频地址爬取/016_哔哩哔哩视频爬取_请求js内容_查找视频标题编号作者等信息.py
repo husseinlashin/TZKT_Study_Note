@@ -24,7 +24,7 @@ def json_request(url):
     # ret = re.findall(r'''"aid":(\d+),''', js_info)
     # ret = sorted(set(ret), key=ret.index) # 去除相同的元素并按与按原顺序排列
 
-    # 可以打开查看原始url,每个视频都是放在archives对应的值中，一个列表中
+    # 可以打开查看原始url,每个视频；都是放在archives对应的值中，一个列表中
     html = json.loads(js_info)  # 转换为python支持的字典格式
     video_list = html["data"]["archives"]
 
