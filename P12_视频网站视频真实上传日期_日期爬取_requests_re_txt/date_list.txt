@@ -1,0 +1,40 @@
+https://www.vixen.com/videos?page=1&size=12：爬取完成
+['September 11, 2019', 'September 06, 2019', 'September 01, 2019', 'August 27, 2019', 'August 22, 2019', 'August 17, 2019', 'August 12, 2019', 'August 07, 2019', 'August 02, 2019', 'July 28, 2019', 'July 23, 2019', 'July 18, 2019']
+https://www.vixen.com/videos?page=2&size=12：爬取完成
+['July 13, 2019', 'July 08, 2019', 'July 03, 2019', 'June 28, 2019', 'June 23, 2019', 'June 18, 2019', 'June 13, 2019', 'June 08, 2019', 'June 03, 2019', 'May 29, 2019', 'May 24, 2019', 'May 19, 2019']
+https://www.vixen.com/videos?page=3&size=12：爬取完成
+['May 14, 2019', 'May 09, 2019', 'May 04, 2019', 'April 29, 2019', 'April 24, 2019', 'April 19, 2019', 'April 14, 2019', 'April 09, 2019', 'April 04, 2019', 'March 30, 2019', 'March 25, 2019', 'March 20, 2019']
+https://www.vixen.com/videos?page=4&size=12：爬取完成
+['March 15, 2019', 'March 10, 2019', 'March 05, 2019', 'February 28, 2019', 'February 23, 2019', 'February 18, 2019', 'February 13, 2019', 'February 08, 2019', 'February 03, 2019', 'January 29, 2019', 'January 24, 2019', 'January 19, 2019']
+https://www.vixen.com/videos?page=5&size=12：爬取完成
+['January 14, 2019', 'January 09, 2019', 'January 04, 2019', 'December 30, 2018', 'December 25, 2018', 'December 20, 2018', 'December 15, 2018', 'December 10, 2018', 'December 05, 2018', 'November 30, 2018', 'November 25, 2018', 'November 20, 2018']
+https://www.vixen.com/videos?page=6&size=12：爬取完成
+['November 15, 2018', 'November 10, 2018', 'November 05, 2018', 'October 31, 2018', 'October 26, 2018', 'October 21, 2018', 'October 16, 2018', 'October 11, 2018', 'October 06, 2018', 'October 01, 2018', 'September 26, 2018', 'September 21, 2018']
+https://www.vixen.com/videos?page=7&size=12：爬取完成
+['September 14, 2018', 'September 11, 2018', 'September 06, 2018', 'September 01, 2018', 'August 27, 2018', 'August 22, 2018', 'August 17, 2018', 'August 12, 2018', 'August 07, 2018', 'August 02, 2018', 'July 28, 2018', 'July 23, 2018']
+https://www.vixen.com/videos?page=8&size=12：爬取完成
+['July 18, 2018', 'July 13, 2018', 'July 08, 2018', 'July 03, 2018', 'June 28, 2018', 'June 23, 2018', 'June 18, 2018', 'June 13, 2018', 'June 08, 2018', 'June 03, 2018', 'May 29, 2018', 'May 24, 2018']
+https://www.vixen.com/videos?page=9&size=12：爬取完成
+['May 19, 2018', 'May 14, 2018', 'May 09, 2018', 'May 04, 2018', 'April 29, 2018', 'April 24, 2018', 'April 19, 2018', 'April 14, 2018', 'April 09, 2018', 'April 04, 2018', 'March 30, 2018', 'March 25, 2018']
+https://www.vixen.com/videos?page=10&size=12：爬取完成
+['March 20, 2018', 'March 15, 2018', 'March 10, 2018', 'March 05, 2018', 'February 28, 2018', 'February 23, 2018', 'February 18, 2018', 'February 13, 2018', 'February 08, 2018', 'February 03, 2018', 'January 29, 2018', 'January 24, 2018']
+https://www.vixen.com/videos?page=11&size=12：爬取完成
+['January 19, 2018', 'January 14, 2018', 'January 09, 2018', 'January 04, 2018', 'December 30, 2017', 'December 25, 2017', 'December 20, 2017', 'December 15, 2017', 'December 10, 2017', 'December 05, 2017', 'November 30, 2017', 'November 25, 2017']
+https://www.vixen.com/videos?page=12&size=12：爬取完成
+['November 20, 2017', 'November 15, 2017', 'November 10, 2017', 'November 05, 2017', 'October 31, 2017', 'October 26, 2017', 'October 21, 2017', 'October 16, 2017', 'October 11, 2017', 'October 06, 2017', 'October 01, 2017', 'September 26, 2017']
+https://www.vixen.com/videos?page=13&size=12：爬取完成
+['September 21, 2017', 'September 16, 2017', 'September 11, 2017', 'September 06, 2017', 'September 01, 2017', 'August 27, 2017', 'August 22, 2017', 'August 17, 2017', 'August 12, 2017', 'August 07, 2017', 'August 02, 2017', 'July 28, 2017']
+https://www.vixen.com/videos?page=14&size=12：爬取完成
+['July 23, 2017', 'July 18, 2017', 'July 13, 2017', 'July 08, 2017', 'July 03, 2017', 'June 28, 2017', 'June 23, 2017', 'June 18, 2017', 'June 13, 2017', 'June 08, 2017', 'June 03, 2017', 'May 29, 2017']
+https://www.vixen.com/videos?page=15&size=12：爬取完成
+['May 24, 2017', 'May 19, 2017', 'May 14, 2017', 'May 09, 2017', 'May 04, 2017', 'April 29, 2017', 'April 24, 2017', 'April 19, 2017', 'April 14, 2017', 'April 09, 2017', 'April 04, 2017', 'March 30, 2017']
+https://www.vixen.com/videos?page=16&size=12：爬取完成
+['March 25, 2017', 'March 20, 2017', 'March 15, 2017', 'March 10, 2017', 'March 05, 2017', 'February 28, 2017', 'February 23, 2017', 'February 18, 2017', 'February 13, 2017', 'February 08, 2017', 'February 03, 2017', 'January 29, 2017']
+https://www.vixen.com/videos?page=17&size=12：爬取完成
+['January 24, 2017', 'January 19, 2017', 'January 14, 2017', 'January 09, 2017', 'January 04, 2017', 'December 30, 2016', 'December 25, 2016', 'December 20, 2016', 'December 15, 2016', 'December 10, 2016', 'December 05, 2016', 'November 30, 2016']
+https://www.vixen.com/videos?page=18&size=12：爬取完成
+['November 25, 2016', 'November 20, 2016', 'November 15, 2016', 'November 10, 2016', 'November 05, 2016', 'October 31, 2016', 'October 26, 2016', 'October 21, 2016', 'October 16, 2016', 'October 11, 2016', 'October 06, 2016', 'October 01, 2016']
+https://www.vixen.com/videos?page=19&size=12：爬取完成
+['September 26, 2016', 'September 21, 2016', 'September 16, 2016', 'September 11, 2016', 'September 06, 2016', 'September 01, 2016', 'August 27, 2016', 'August 22, 2016', 'August 17, 2016', 'August 12, 2016', 'August 07, 2016', 'August 02, 2016']
+https://www.vixen.com/videos?page=20&size=12：爬取完成
+['July 28, 2016', 'July 23, 2016', 'July 18, 2016', 'July 13, 2016', 'July 08, 2016', 'July 03, 2016', 'June 28, 2016', 'June 23, 2016', 'June 18, 2016', 'June 13, 2016']
