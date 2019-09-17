@@ -30,7 +30,7 @@ class My51jobSpider(CrawlSpider):
         for job in jobs:
             # 匹配结果仍然是一个列表类型,列表中只有一个元素，
             # P02中已经提取过，发现里面有很多空格，提取第一个元素的值并去掉里面的空格
-            # 注意P02使用的是etree.HTML解析源码，提取元素可以使用列表语法，该处selector不可以
+            # 注意P02使用的是etree.HTML解析源码，提取元素可以使用列表语法，该处selector下的xpath不可以
             jobName = job.xpath("./p/span/a/text()").extract_first().strip()
             jobLink = job.xpath("./p/span/a/@href").extract_first().strip()
             jobCompany = job.xpath("./span[1]/a/text()").extract_first().strip()

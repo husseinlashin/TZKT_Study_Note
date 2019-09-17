@@ -1,3 +1,4 @@
+Vixen.19.09.16
 Vixen.19.09.11
 Vixen.19.09.06
 Vixen.19.09.01
@@ -33,7 +34,7 @@ Vixen.19.04.09
 Vixen.19.04.04
 Vixen.19.03.30
 Vixen.19.03.25
-03 Vixen., Vixen.19
+Vixen.19.03.20
 Vixen.19.03.15
 Vixen.19.03.10
 Vixen.19.03.05
@@ -51,13 +52,13 @@ Vixen.19.01.09
 Vixen.19.01.04
 Vixen.18.12.30
 Vixen.18.12.25
-12 Vixen., Vixen.18
+Vixen.18.12.20
 Vixen.18.12.15
 Vixen.18.12.10
 Vixen.18.12.05
 Vixen.18.11.30
 Vixen.18.11.25
-11 Vixen., Vixen.18
+Vixen.18.11.20
 Vixen.18.11.15
 Vixen.18.11.10
 Vixen.18.11.05
@@ -106,7 +107,7 @@ Vixen.18.04.09
 Vixen.18.04.04
 Vixen.18.03.30
 Vixen.18.03.25
-03 Vixen., Vixen.18
+Vixen.18.03.20
 Vixen.18.03.15
 Vixen.18.03.10
 Vixen.18.03.05
@@ -124,13 +125,13 @@ Vixen.18.01.09
 Vixen.18.01.04
 Vixen.17.12.30
 Vixen.17.12.25
-12 Vixen., Vixen.17
+Vixen.17.12.20
 Vixen.17.12.15
 Vixen.17.12.10
 Vixen.17.12.05
 Vixen.17.11.30
 Vixen.17.11.25
-11 Vixen., Vixen.17
+Vixen.17.11.20
 Vixen.17.11.15
 Vixen.17.11.10
 Vixen.17.11.05
@@ -179,7 +180,7 @@ Vixen.17.04.09
 Vixen.17.04.04
 Vixen.17.03.30
 Vixen.17.03.25
-03 Vixen., Vixen.17
+Vixen.17.03.20
 Vixen.17.03.15
 Vixen.17.03.10
 Vixen.17.03.05
@@ -197,13 +198,13 @@ Vixen.17.01.09
 Vixen.17.01.04
 Vixen.16.12.30
 Vixen.16.12.25
-12 Vixen., Vixen.16
+Vixen.16.12.20
 Vixen.16.12.15
 Vixen.16.12.10
 Vixen.16.12.05
 Vixen.16.11.30
 Vixen.16.11.25
-11 Vixen., Vixen.16
+Vixen.16.11.20
 Vixen.16.11.15
 Vixen.16.11.10
 Vixen.16.11.05
