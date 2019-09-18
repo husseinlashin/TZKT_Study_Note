@@ -6,4 +6,3 @@ with open('tushy.txt', 'r', encoding='utf-8') as f:
     print(len(content))
     list_new = sorted(set(content), key=content.index)
     print(len(list_new))
-    print(list_new)

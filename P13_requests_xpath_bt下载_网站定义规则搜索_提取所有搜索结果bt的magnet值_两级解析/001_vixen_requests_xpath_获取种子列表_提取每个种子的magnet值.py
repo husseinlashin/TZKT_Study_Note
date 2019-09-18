@@ -19,20 +19,21 @@ Desc: https://www.51cc.co/磁力链接网站种子批量下载
 import requests
 from lxml import etree
 import re
+import user_agent
 
 
 class BtDownload():
 
     def __init__(self):
         self.headers = {
-            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.75 Safari/537.36'}
+            'User-Agent': user_agent.generate_user_agent()}
         self.url = "https://www.51cc.co/list?q=Vixen%201080p.MP4-KTR%5Brarbg%5D&page={}"
         # self.url = "https://www.51cc.co/list?q=Tushy%201080p.MP4-KTR%5Brarbg%5D&page={}"
 
     def url_list(self):  # 构造所有页码的url列表
         # 原始网址来自搜索某个种子的结果页
         url_list = [self.url.format(i) for i in
-                    range(9, 29)]
+                    range(9, 15)]
         return url_list
 
     def get_html(self, url):  # 获取html文档
@@ -69,7 +70,7 @@ class BtDownload():
         return magnet
 
     def save_bt(self, bt_list):
-        with open("vixen.txt", "a", encoding="utf-8") as f:
+        with open("111vixen.txt", "a", encoding="utf-8") as f:
             for bt in bt_list:
                 print(bt["magnet"])
                 f.write(bt["magnet"] + "\n")

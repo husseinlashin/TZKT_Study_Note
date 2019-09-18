@@ -28,6 +28,10 @@ proxy = [
     },
 ]
 
-url = '爬取链接地址'
+url = 'https://www.baidu.com/'
 
 response = requests.get(url, proxies=random.choice(proxy))
+
+
+print(response.status_code)
+print(response.headers)

@@ -29,7 +29,7 @@ Desc: https://www.51cc.co/磁力链接网站种子批量下载
 import requests
 from lxml import etree
 import re
-
+import time
 
 class BtDownload():
 
@@ -42,7 +42,7 @@ class BtDownload():
     def url_list(self):  # 构造所有页码的url列表
         # 原始网址来自搜索某个种子的结果页
         url_list = [self.url.format(i) for i in
-                    range(17, 34)]
+                    range(21, 34)]
         return url_list
 
     def get_html(self, url):  # 获取html文档
@@ -59,6 +59,7 @@ class BtDownload():
         # 先提取一页中所有岗位所在的标签
         bts = html.xpath(".//ul[@class='list']/li")
         for bt in bts:
+            time.sleep(3)
             bt_dict = dict()
             # 获取链接地址，只是部分地址
             link_old = bt.xpath("./a/@href")[0]

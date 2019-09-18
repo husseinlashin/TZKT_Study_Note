@@ -8,6 +8,9 @@ proxy = {
     'HTTPS': '162.105.30.101:8080'
 }
 
-url = '爬取链接地址'
+url = 'https://www.baidu.com/'
 
 response = requests.get(url,proxies=proxy)
+
+print(response.status_code)
+print(response.headers)
