@@ -25,20 +25,23 @@ import user_agent
 class BtDownload():
 
     def __init__(self):
+        # 使用随机浏览器代理
         self.headers = {
             'User-Agent': user_agent.generate_user_agent()}
         self.url = "https://www.51cc.co/list?q=Vixen%201080p.MP4-KTR%5Brarbg%5D&page={}"
         # self.url = "https://www.51cc.co/list?q=Tushy%201080p.MP4-KTR%5Brarbg%5D&page={}"
+        # 使用代理IP
+        self.proxy = {'HTTPS': 'http://162.105.30.101:8080'}
 
     def url_list(self):  # 构造所有页码的url列表
         # 原始网址来自搜索某个种子的结果页
         url_list = [self.url.format(i) for i in
-                    range(9, 15)]
+                    range(28, 29)]
         return url_list
 
     def get_html(self, url):  # 获取html文档
         # 请求对象，传入请求头
-        response = requests.get(url, headers=self.headers).content.decode()
+        response = requests.get(url, headers=self.headers, proxies=self.proxy).content.decode()
         # 解析requests.get获得的源码转化为XPath可以解析的对象，转换后类型：<class 'lxml.etree._Element'>
         html = etree.HTML(response, etree.HTMLParser())
         # 返回网页源码,是一个字符串类型
@@ -65,12 +68,12 @@ class BtDownload():
 
     def get_magnet(self, link):  # 获取详情页的magnet的值
         # 详情页magnet使用xpath查找不出来，未找到原因，此处使用re直接提取magnet的值
-        response = requests.get(link, headers=self.headers).content.decode()
+        response = requests.get(link, headers=self.headers, proxies=self.proxy).content.decode()
         magnet = re.findall(r">(magnet:.*?)</code>", response)[0]
         return magnet
 
     def save_bt(self, bt_list):
-        with open("111vixen.txt", "a", encoding="utf-8") as f:
+        with open("vixen.txt", "a", encoding="utf-8") as f:
             for bt in bt_list:
                 print(bt["magnet"])
                 f.write(bt["magnet"] + "\n")

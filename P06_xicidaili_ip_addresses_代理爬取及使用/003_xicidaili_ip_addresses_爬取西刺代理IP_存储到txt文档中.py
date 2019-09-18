@@ -19,9 +19,8 @@ def crawl_xicidaili():
     for i in range(1, 20):
         start_url = 'https://www.xicidaili.com/nn/{}'.format(i)
         # 随机生成用户代理,每次请求都会变化
-        user_agents = user_agent.generate_user_agent()
         headers = {
-            'User-Agent': user_agents
+            'User-Agent': user_agent.generate_user_agent()
         }
         # 请求获取网页,指定网页源码相同的编码格式
         res = requests.get(url=start_url, headers=headers)

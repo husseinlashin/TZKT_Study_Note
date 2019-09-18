@@ -29,15 +29,19 @@ Desc: https://www.51cc.co/磁力链接网站种子批量下载
 import requests
 from lxml import etree
 import re
-import time
+import user_agent
+
 
 class BtDownload():
 
     def __init__(self):
+        # 使用随机浏览器代理
         self.headers = {
-            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.75 Safari/537.36'}
+            'User-Agent': user_agent.generate_user_agent()}
         # self.url = "https://www.51cc.co/list?q=Vixen%201080p.MP4-KTR%5Brarbg%5D&page={}"
         self.url = "https://www.51cc.co/list?q=Tushy%201080p.MP4-KTR%5Brarbg%5D&page={}"
+        # 使用代理IP
+        self.proxy = {'HTTPS': 'http://162.105.30.101:8080'}
 
     def url_list(self):  # 构造所有页码的url列表
         # 原始网址来自搜索某个种子的结果页
@@ -47,7 +51,7 @@ class BtDownload():
 
     def get_html(self, url):  # 获取html文档
         # 请求对象，传入请求头
-        response = requests.get(url, headers=self.headers).content.decode()
+        response = requests.get(url, headers=self.headers, proxies=self.proxy).content.decode()
         # 解析requests.get获得的源码转化为XPath可以解析的对象，转换后类型：<class 'lxml.etree._Element'>
         html = etree.HTML(response, etree.HTMLParser())
         # 返回网页源码,是一个字符串类型
@@ -59,7 +63,6 @@ class BtDownload():
         # 先提取一页中所有岗位所在的标签
         bts = html.xpath(".//ul[@class='list']/li")
         for bt in bts:
-            time.sleep(3)
             bt_dict = dict()
             # 获取链接地址，只是部分地址
             link_old = bt.xpath("./a/@href")[0]
@@ -75,7 +78,7 @@ class BtDownload():
 
     def get_magnet(self, link):  # 获取详情页的magnet的值
         # 详情页magnet使用xpath查找不出来，未找到原因，此处使用re直接提取magnet的值
-        response = requests.get(link, headers=self.headers).content.decode()
+        response = requests.get(link, headers=self.headers, proxies=self.proxy).content.decode()
         magnet = re.findall(r">(magnet:.*?)</code>", response)[0]
         return magnet
 
