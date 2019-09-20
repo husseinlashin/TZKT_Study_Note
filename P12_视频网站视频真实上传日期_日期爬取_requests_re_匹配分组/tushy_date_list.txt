@@ -1,0 +1,52 @@
+https://www.tushy.com/videos?page=1&size=12：爬取完成
+['September 18, 2019', 'September 13, 2019', 'September 08, 2019', 'September 03, 2019', 'August 29, 2019', 'August 24, 2019', 'August 19, 2019', 'August 14, 2019', 'August 09, 2019', 'August 04, 2019', 'July 30, 2019', 'July 25, 2019']
+https://www.tushy.com/videos?page=2&size=12：爬取完成
+['July 20, 2019', 'July 15, 2019', 'July 10, 2019', 'July 05, 2019', 'June 30, 2019', 'June 25, 2019', 'June 20, 2019', 'June 15, 2019', 'June 10, 2019', 'June 05, 2019', 'May 31, 2019', 'May 26, 2019']
+https://www.tushy.com/videos?page=3&size=12：爬取完成
+['May 21, 2019', 'May 16, 2019', 'May 11, 2019', 'May 06, 2019', 'May 01, 2019', 'April 26, 2019', 'April 21, 2019', 'April 16, 2019', 'April 11, 2019', 'April 06, 2019', 'April 01, 2019', 'March 27, 2019']
+https://www.tushy.com/videos?page=4&size=12：爬取完成
+['March 22, 2019', 'March 17, 2019', 'March 12, 2019', 'March 07, 2019', 'March 02, 2019', 'February 25, 2019', 'February 20, 2019', 'February 13, 2019', 'February 10, 2019', 'February 05, 2019', 'January 31, 2019', 'January 26, 2019']
+https://www.tushy.com/videos?page=5&size=12：爬取完成
+['January 21, 2019', 'January 16, 2019', 'January 11, 2019', 'January 06, 2019', 'January 01, 2019', 'December 27, 2018', 'December 20, 2018', 'December 17, 2018', 'December 12, 2018', 'December 07, 2018', 'December 02, 2018', 'November 27, 2018']
+https://www.tushy.com/videos?page=6&size=12：爬取完成
+['November 21, 2018', 'November 17, 2018', 'November 12, 2018', 'November 07, 2018', 'November 02, 2018', 'October 28, 2018', 'October 23, 2018', 'October 18, 2018', 'October 13, 2018', 'October 08, 2018', 'October 03, 2018', 'September 28, 2018']
+https://www.tushy.com/videos?page=7&size=12：爬取完成
+['September 23, 2018', 'September 18, 2018', 'September 13, 2018', 'September 08, 2018', 'September 03, 2018', 'August 29, 2018', 'August 24, 2018', 'August 19, 2018', 'August 14, 2018', 'August 09, 2018', 'August 04, 2018', 'July 30, 2018']
+https://www.tushy.com/videos?page=8&size=12：爬取完成
+['July 25, 2018', 'July 20, 2018', 'July 15, 2018', 'July 10, 2018', 'July 05, 2018', 'June 30, 2018', 'June 25, 2018', 'June 20, 2018', 'June 15, 2018', 'June 10, 2018', 'June 05, 2018', 'May 31, 2018']
+https://www.tushy.com/videos?page=9&size=12：爬取完成
+['May 26, 2018', 'May 21, 2018', 'May 16, 2018', 'May 11, 2018', 'May 06, 2018', 'May 01, 2018', 'April 26, 2018', 'April 21, 2018', 'April 16, 2018', 'April 11, 2018', 'April 06, 2018', 'April 01, 2018']
+https://www.tushy.com/videos?page=10&size=12：爬取完成
+['March 27, 2018', 'March 22, 2018', 'March 17, 2018', 'March 12, 2018', 'March 07, 2018', 'March 02, 2018', 'February 25, 2018', 'February 20, 2018', 'February 15, 2018', 'February 10, 2018', 'February 05, 2018', 'January 31, 2018']
+https://www.tushy.com/videos?page=11&size=12：爬取完成
+['January 26, 2018', 'January 21, 2018', 'January 16, 2018', 'January 11, 2018', 'January 06, 2018', 'January 01, 2018', 'December 27, 2017', 'December 22, 2017', 'December 17, 2017', 'December 12, 2017', 'December 07, 2017', 'December 02, 2017']
+https://www.tushy.com/videos?page=12&size=12：爬取完成
+['November 27, 2017', 'November 22, 2017', 'November 17, 2017', 'November 12, 2017', 'November 07, 2017', 'November 02, 2017', 'October 28, 2017', 'October 23, 2017', 'October 18, 2017', 'October 13, 2017', 'October 08, 2017', 'October 03, 2017']
+https://www.tushy.com/videos?page=13&size=12：爬取完成
+['September 28, 2017', 'September 23, 2017', 'September 18, 2017', 'September 13, 2017', 'September 08, 2017', 'September 03, 2017', 'August 29, 2017', 'August 24, 2017', 'August 19, 2017', 'August 14, 2017', 'August 09, 2017', 'August 04, 2017']
+https://www.tushy.com/videos?page=14&size=12：爬取完成
+['July 30, 2017', 'July 25, 2017', 'July 20, 2017', 'July 15, 2017', 'July 10, 2017', 'July 05, 2017', 'June 30, 2017', 'June 25, 2017', 'June 20, 2017', 'June 15, 2017', 'June 10, 2017', 'June 05, 2017']
+https://www.tushy.com/videos?page=15&size=12：爬取完成
+['May 31, 2017', 'May 26, 2017', 'May 21, 2017', 'May 16, 2017', 'May 11, 2017', 'May 06, 2017', 'May 01, 2017', 'April 26, 2017', 'April 21, 2017', 'April 16, 2017', 'April 11, 2017', 'April 06, 2017']
+https://www.tushy.com/videos?page=16&size=12：爬取完成
+['April 01, 2017', 'March 27, 2017', 'March 22, 2017', 'March 17, 2017', 'March 12, 2017', 'March 07, 2017', 'March 02, 2017', 'February 25, 2017', 'February 20, 2017', 'February 15, 2017', 'February 10, 2017', 'February 05, 2017']
+https://www.tushy.com/videos?page=17&size=12：爬取完成
+['January 31, 2017', 'January 26, 2017', 'January 21, 2017', 'January 16, 2017', 'January 11, 2017', 'January 06, 2017', 'January 01, 2017', 'December 27, 2016', 'December 22, 2016', 'December 17, 2016', 'December 12, 2016', 'December 07, 2016']
+https://www.tushy.com/videos?page=18&size=12：爬取完成
+['December 02, 2016', 'November 27, 2016', 'November 22, 2016', 'November 17, 2016', 'November 12, 2016', 'November 07, 2016', 'November 02, 2016', 'October 28, 2016', 'October 23, 2016', 'October 18, 2016', 'October 13, 2016', 'October 08, 2016']
+https://www.tushy.com/videos?page=19&size=12：爬取完成
+['October 03, 2016', 'September 28, 2016', 'September 23, 2016', 'September 18, 2016', 'September 13, 2016', 'September 08, 2016', 'September 03, 2016', 'August 29, 2016', 'August 24, 2016', 'August 19, 2016', 'August 14, 2016', 'August 09, 2016']
+https://www.tushy.com/videos?page=20&size=12：爬取完成
+['August 04, 2016', 'July 30, 2016', 'July 25, 2016', 'July 20, 2016', 'July 15, 2016', 'July 10, 2016', 'July 05, 2016', 'June 30, 2016', 'June 25, 2016', 'June 20, 2016', 'June 15, 2016', 'June 10, 2016']
+https://www.tushy.com/videos?page=21&size=12：爬取完成
+['June 05, 2016', 'May 31, 2016', 'May 26, 2016', 'May 21, 2016', 'May 16, 2016', 'May 11, 2016', 'May 06, 2016', 'May 01, 2016', 'April 26, 2016', 'April 21, 2016', 'April 16, 2016', 'April 11, 2016']
+https://www.tushy.com/videos?page=22&size=12：爬取完成
+['April 06, 2016', 'April 01, 2016', 'March 27, 2016', 'March 22, 2016', 'March 17, 2016', 'March 12, 2016', 'March 07, 2016', 'March 02, 2016', 'February 26, 2016', 'February 21, 2016', 'February 16, 2016', 'February 11, 2016']
+https://www.tushy.com/videos?page=23&size=12：爬取完成
+[]
+https://www.tushy.com/videos?page=24&size=12：爬取完成
+['November 16, 2015', 'November 09, 2015', 'November 02, 2015', 'October 26, 2015', 'October 19, 2015', 'October 12, 2015', 'October 05, 2015', 'October 02, 2015', 'September 28, 2015', 'September 21, 2015', 'September 14, 2015', 'September 07, 2015']
+https://www.tushy.com/videos?page=25&size=12：爬取完成
+['August 31, 2015', 'August 24, 2015', 'August 17, 2015', 'August 10, 2015', 'August 03, 2015', 'July 27, 2015', 'July 20, 2015', 'July 13, 2015', 'July 06, 2015', 'June 29, 2015', 'June 22, 2015', 'June 15, 2015']
+https://www.tushy.com/videos?page=26&size=12：爬取完成
+['June 08, 2015', 'June 01, 2015', 'May 25, 2015', 'May 18, 2015', 'May 11, 2015', 'May 04, 2015', 'April 27, 2015', 'April 20, 2015']
