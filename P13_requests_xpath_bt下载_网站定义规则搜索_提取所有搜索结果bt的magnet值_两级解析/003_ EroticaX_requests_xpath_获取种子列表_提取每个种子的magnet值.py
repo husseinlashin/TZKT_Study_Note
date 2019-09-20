@@ -43,14 +43,15 @@ class BtDownload():
             'User-Agent': user_agent.generate_user_agent()}
         # 初始URL手动输入，自定义的搜索规则
         # self.url = "https://www.51cc.co/list?q=Vixen%201080p.MP4-KTR%5Brarbg%5D&page={}"
-        self.url = "https://www.51cc.co/list?q=Tushy%201080p.MP4-KTR%5Brarbg%5D&page={}"
+        # self.url = "https://www.51cc.co/list?q=Tushy%201080p.MP4-KTR%5Brarbg%5D&page={}"
+        self.url = "https://www.51cc.co/list?q=EroticaX%201080p.MP4-KTR%5Brarbg%5D&page={}"
         # 使用代理IP
         self.proxy = {'HTTPS': 'http://162.105.30.101:8080'}
 
     def url_list(self):  # 构造所有页码的url列表
         # 原始网址来自搜索某个种子的结果页
         url_list = [self.url.format(i) for i in
-                    range(21, 34)]
+                    range(1, 26)]
         return url_list
 
     def get_html(self, url):  # 获取html文档
@@ -87,7 +88,7 @@ class BtDownload():
         return magnet
 
     def save_bt(self, bt_list):
-        with open("tushy.txt", "a", encoding="utf-8") as f:
+        with open("EroticaX.txt", "a", encoding="utf-8") as f:
             for bt in bt_list:
                 print(bt["magnet"])
                 f.write(bt["magnet"] + "\n")

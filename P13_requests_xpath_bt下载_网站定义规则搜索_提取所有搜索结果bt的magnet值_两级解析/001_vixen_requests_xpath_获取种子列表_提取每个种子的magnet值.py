@@ -14,6 +14,9 @@ Desc: https://www.51cc.co/磁力链接网站种子批量下载
 # 5.获取该页的种子的magnet的值
 # 6.依次获取之后每一页的每一个种子
 # 为了代码简单，页码可以确定，规律统一，直接构造url列表即可
+
+# 代码只需要手动输入self.url = "xxxxx"
+# 修改要爬取的页码范围range(1, 26)
 '''
 
 import requests
@@ -28,6 +31,7 @@ class BtDownload():
         # 使用随机浏览器代理
         self.headers = {
             'User-Agent': user_agent.generate_user_agent()}
+        # 初始URL手动输入，自定义的搜索规则
         self.url = "https://www.51cc.co/list?q=Vixen%201080p.MP4-KTR%5Brarbg%5D&page={}"
         # self.url = "https://www.51cc.co/list?q=Tushy%201080p.MP4-KTR%5Brarbg%5D&page={}"
         # 使用代理IP
