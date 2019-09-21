@@ -1,6 +1,7 @@
+# 打开txt文件，去除重复的magnet值
+# 然后按原始循序保存新列表到txt文件中
 
-
-with open('EroticaX.txt', 'r', encoding='utf-8') as f:
+with open('babes.txt', 'r', encoding='utf-8') as f:
     content = f.readlines()
     print(content)
     print(len(content))
