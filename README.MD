@@ -42,5 +42,48 @@
     - 单个IP代理使用方式
     - 多个IP代理使用方式
     - 使用IP池随机代理
+    - 筛选有效代理，移除无效代理
+
+## P07_logging_record_crawl_process
+- logging日志
+
+## P08_requests_re_内涵段子爬虫
+- 内涵段子爬虫
+    - requests
+    - re正则提取数据
+    
+## P09_requests_xml_xpath_json.dumps_糗事百科爬虫
+- 糗事百科爬虫
+    - requests
+    - xml xpath解析
+    - json存储数据
+    
+## P10_糗事百科爬虫_升级为多线程爬虫_threading.Thread
+- 多线程糗事百科爬虫
+    - requests
+    - xml xpath解析
+    - json存储数据
+    - threading.Thread
+    
+## P11_哔哩哔哩各栏目下面视频地址爬取-JS动态请求分析
+- 哔哩哔哩视频爬虫
+    - 爬取一个栏目所有视频信息
+    - JS动态请求逆向分析
+    - 核心是寻找视频页面的真实请求地址
+    - 重点是JS分析
+## P12_视频网站视频真实上传日期_日期爬取_requests_re_匹配分组
+- 视频网站视频真实日期提取
+    - requests
+    - re正则
+    - 正则匹配分组
+    - 日期匹配分组后交换位置
+    - 日期替换
+    - 日期修改
+    
+## P13_requests_xpath_bt下载_网站定义规则搜索_提取所有搜索结果bt的magnet值_两级解析
+- 种子批量爬虫
+    - 搜索种子(搜索规则也可以加入到爬虫中)
+    - 提取搜索到的种子magnet值
+    - 去除重复的种子，保存
 
 
