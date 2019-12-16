@@ -17,6 +17,7 @@ class QiushiSpider():
 
     def parse_url(self, url):
         response = requests.get(url=url, headers=self.headers)
+        # response.content是bytes格式，decode()编码后才是字符串文本内容，会自动推测编码格式
         return response.content.decode()
 
     def get_content_list(self, html_str):  # 提取数据

@@ -26,8 +26,9 @@ def dbmeinvSpier(url):
     res = request.urlopen(req, timeout=20)
     # 读取得到源代码
     contents = res.read()
+    print(type(contents)) # <class 'bytes'>
     # 使用bs4解析源码
-    soup = BeautifulSoup(contents, 'html.parser')
+    soup = BeautifulSoup(contents, 'html.parser') # 也可以使用lxml解析库
     # 找出所有的图片标签，返回结果是一个列表
     girl_pictures = soup.find_all('img')
     # 提取出每张图片的标签

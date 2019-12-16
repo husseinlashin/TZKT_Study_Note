@@ -11,7 +11,7 @@ class Neihan():
 
     def parse_url(self, url):
         response = requests.get(url=url, headers=self.headers)
-        return response.content.decode()
+        return response.content.decode()  # response.content是bytes类型，需要解码为字符串类型，decode() 会自动推测解码格式
 
     def get_page_content(self, html_str):
         # 内涵文字都是放在p标签中，但是只有只有前10个，re.S表示前面的字符串是普通字符串，里面的转义符都当做普通字符串

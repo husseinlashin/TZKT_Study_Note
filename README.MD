@@ -4,6 +4,44 @@
 # 用于练习巩固Python知识
 # 爬虫小项目、网络热点小项目
 
+XML lxml XPath Beautiful之间有什么关系
+- XML是一种类似html的标记语言
+- lxml是python的一个解析库，支持HTML和XML的解析
+- XPath，全称XML Path Language，即XML路径语言，它是一门在XML文档中查找信息的语言，它最初是用来搜寻XML文档的，但是它同样适用于HTML文档的搜索
+- 使用步骤：
+    - 请求网页获取的text文本内容，使用lxml解析为XML语言，然后使用XPath查找；
+    - 请求网页获取到的bytes内容，也可以使用BeautifulSoup，解析模块可以选择lxml进行解析，然后查找.
+    
+    - xpath
+    Python中使用Xpath
+    # 1 导入模块
+    import requests
+    from lxml import etree
+    # 2 获取文本，r.text类型是字符串文本内容，
+        如果使用r.content则是bytes字节，还需要解码r.content.decode()
+        解码会自动推测编码格式
+    r = requests.get(url, headers=headers)
+    text = r.text
+    # 3 text解析为xml格式，就可以使用xpath查找了
+    html = etree.HTML(text,etree.HTMLParser())
+    # 4 查找标签，返回值是列表
+    jobs = html.xpath(".//div[@id='resultList']//div[@class='el']")
+    
+    - Python中使用bs4模块
+    # 请求对象传入请求头
+    req = request.Request(url, headers=headers)
+    # 打开对象
+    res = request.urlopen(req, timeout=20)
+    # 读取得到源代码
+    contents = res.read() 
+    print(type(contents)) # <class 'bytes'>
+    # 使用bs4解析源码
+    soup = BeautifulSoup(contents, 'html.parser') # 也可以使用lxml解析库
+    
+    bs4和lxml解析，一个传入的是字节，一个是文本内容
+    解析库可以更换，bs4中可以选择lxml作为解析库
+    
+    
 ## P01_budejie_videos
 - 百思不得姐网站全部视频下载
     - 主要使用：requests,urllib进行请求
