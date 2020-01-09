@@ -27,7 +27,8 @@ def dbmeinvSpier(url):
     # 读取得到源代码
     contents = res.read()
     print(type(contents)) # <class 'bytes'>
-    # 使用bs4解析源码
+    # 使用bs4解析源码，bs4可以传入字节或者字符串，自己会识别解码，比如requests请求，res.text就是字符串
+    # 也可以使用requests.get请求，返回的res.text直接传入，传入的就是字符串类型
     soup = BeautifulSoup(contents, 'html.parser') # 也可以使用lxml解析库
     # 找出所有的图片标签，返回结果是一个列表
     girl_pictures = soup.find_all('img')

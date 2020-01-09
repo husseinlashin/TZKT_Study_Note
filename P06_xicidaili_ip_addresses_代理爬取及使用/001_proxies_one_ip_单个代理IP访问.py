@@ -16,3 +16,5 @@ response = requests.get(url, proxies=proxies)  #verify=False是否验证服务�
 
 print(response.status_code)
 print(response.headers)
+
+# 上面代理IP一段时间就会失效，需要自己更换
