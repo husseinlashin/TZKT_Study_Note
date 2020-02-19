@@ -14,6 +14,7 @@ from my51jobCrawl.items import JobListItem
 # 下载数据到MongoDB数据库jobList中
 # 下载ITEM中的数据到本地json文件中
 
+# 默认创建的管道，必须有默认的process_item方法
 class My51JobcrawlPipeline(object):
 
     def __init__(self, mongo_uri, mongo_db, replicaset):
@@ -40,7 +41,10 @@ class My51JobcrawlPipeline(object):
         self.client.close()
 
     def process_item(self, item, spider):
+        # 判断传过来的item(就是爬虫里面的jobListItem，最后yield jobListItem)是否属于JobListItem对象
+        # 因为我们spiders文件夹可能有多个爬虫，items.py中也会自定义多个item的类，因此此处先进行一下判断
         if isinstance(item, JobListItem):
+            # 对item进行处理，调用处理的方法
             self._process_joblist_item(item)
         else:
             pass
@@ -56,12 +60,14 @@ class My51JobcrawlPipeline(object):
         # 向数据库51job中的jobList表中插入item数据
         self.db.jobList.insert(dict(item))
 
+
+# 自定义的管道
 class MyJobcrawlPipeline(object):
 
     def __init__(self):
         self.file = open('51jobs.json', 'w', encoding='utf-8')
 
-    # 将ITEM里面的信息写入到一个json文件中
+    # 将ITEM里面的信息写入到一个json文件中，jobListItem就是爬虫中实例化后的一个item对象
     def process_item_json(self, jobListItem, spider):
         # 判断item字典对象中jobName对应的是否还有值
         if jobListItem['jobName']:

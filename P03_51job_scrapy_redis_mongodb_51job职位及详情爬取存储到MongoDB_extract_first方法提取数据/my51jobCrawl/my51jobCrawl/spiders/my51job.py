@@ -2,7 +2,7 @@
 import scrapy
 from scrapy.linkextractors import LinkExtractor
 from scrapy.spiders import CrawlSpider, Rule
-from my51jobCrawl.items import JobListItem
+from my51jobCrawl.items import JobListItem  # 将主文件夹my51jobCrawl标记为系统路径
 from scrapy.crawler import CrawlerProcess
 from scrapy.utils.project import get_project_settings
 
@@ -12,7 +12,7 @@ class My51jobSpider(CrawlSpider):
     start_urls = ['https://search.51job.com/list/090200,000000,0000,00,9,99,python,2,1.html?lang=c&stype=1&postchannel=0000&workyear=99&cotype=99&degreefrom=99&jobterm=99&companysize=99&lonlat=0%2C0&radius=-1&ord_field=0&confirmdate=9&fromType=&dibiaoid=0&address=&line=&specialarea=00&from=&welfare=']
 
     # 网页提取规则可使用正则或者xpath，
-    # 参考Spider_development_study_note中网页解析验证中的文件my51job_rules_allow_use_xpath_1.py
+    # 参考Spider_development_study_note项目中ch00/04文件夹中网页解析验证中的文件my51job_rules_allow_use_xpath_1.py
     # 注意extract()提取所有的元素的内容其结果是一个列表，extract_first()提取列表中第一个元素内容
     # 提取li标签中最后一个元素使用li[last()]，倒数第二个li[last()-1]
     # 使用XPATH规则提取连接，只需要写到连接所在的标签即可
@@ -48,7 +48,7 @@ class My51jobSpider(CrawlSpider):
             except:
                 pass
 
-            # 上面提取到的信息，加入到Item容器中，用于存储每一个工作的信息
+            # 上面提取到的信息，加入到Item容器中，用于存储每一个工作的信息,给键进行赋值
             jobListItem = JobListItem(jobName=jobName, jobLink=jobLink,
                                       jobCompany=jobCompany, jobAddress=jobAddress,
                                       jobDate=jobDate, jobSalary=jobSalary,
