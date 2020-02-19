@@ -39,7 +39,8 @@ def get(html):
     jobs = html.xpath(".//div[@id='resultList']//div[@class='el']")
     for job in jobs:
         # 匹配结果仍然是一个列表类型,列表中只有一个元素，提取元素并去掉里面的空格
-        # scrapy使用的selector中的xpath不能用这种[0].strip()列表语法，使用extract()提取所有内容为一个列表,extract_first()提取第一个列表元素
+        # scrapy使用的selector中的xpath不能用这种[0].strip()列表语法，
+        # 使用extract()提取所有内容为一个列表,extract_first()提取第一个列表元素
         # 从当前的job下开始选取
         name = job.xpath("./p/span/a/text()")[0].strip()
         link = job.xpath("./p/span/a/@href")[0].strip()

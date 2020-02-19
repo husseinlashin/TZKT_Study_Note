@@ -13,7 +13,7 @@ class My51jobSpider(CrawlSpider):
 
     # 网页提取规则可使用正则或者xpath，
     # 参考Spider_development_study_note中网页解析验证中的文件my51job_rules_allow_use_xpath_1.py
-    # 注意extract()结果是一个列表，extract_first()提取列表中第一个元素
+    # 注意extract()提取所有的元素的内容其结果是一个列表，extract_first()提取列表中第一个元素内容
     # 提取li标签中最后一个元素使用li[last()]，倒数第二个li[last()-1]
     # 使用XPATH规则提取连接，只需要写到连接所在的标签即可
     rules = (
@@ -31,7 +31,7 @@ class My51jobSpider(CrawlSpider):
             # 匹配结果仍然是一个列表类型,列表中只有一个元素，
             # P02中已经提取过，发现里面有很多空格，提取第一个元素的值并去掉里面的空格
             # 注意P02使用的是etree.HTML解析源码，提取元素可以使用列表语法，该处是scrapy中的selector下的xpath不可以
-            # 待解析的对象实例化为一个Selector对象，返回的对象实际是一个列表对象：SelectorList和Selector，其中前者是后者的集合，前者也是一个列表对象。，然后该对象支持css re XPath
+            # 待解析的对象实例化为一个Selector对象，返回的对象实际是一个列表对象：SelectorList和Selector，其中前者是后者的集合，前者也是一个列表对象。然后该对象支持css re XPath
             # 官方推荐 ：
             # .extract_first()：提取SelectorList对象中第一个元素的内容。即返回列表中的一个元素内容。
             # .extract()：如果是SelectorList对象使用，则返回包含内容的列表；如果是Selector使用，则返回它的内容。返回的是一个列表，包含所有的内容。

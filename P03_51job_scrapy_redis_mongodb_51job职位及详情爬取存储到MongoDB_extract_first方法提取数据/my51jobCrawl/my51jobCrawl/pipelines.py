@@ -24,7 +24,6 @@ class My51JobcrawlPipeline(object):
         self.replicaset = replicaset
 
     @classmethod
-
     # 定义连接MongDB数据库的方法
     def from_crawler(cls, crawler):
         return cls(
