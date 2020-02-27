@@ -109,7 +109,8 @@ USER_AGENTS = [
 # 使用scrapy_redis去重优化
 #使用scrapy_redis的中的调度器，注意运行爬虫前，启动本地的redis-server服务器
 SCHEDULER = "scrapy_redis.scheduler.Scheduler"
-# 在redis中保持scrapy-redis用到的各个队列，从而允许暂停和暂停后恢复
+# （可选参数）数据是否持久化，程序停止数据保存，下次启动数据继续使用
+# 在Redis中保持scrapy-redis用到的各个队列，从而允许暂停和暂停后恢复
 SCHEDULER_PERSIST = True
 #使用scrapy_redis的去重方式
 DUPEFILTER_CLASS = "scrapy_redis.dupefilter.RFPDupeFilter"
@@ -154,7 +155,7 @@ REPLICASET = 'test'
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
     'my51jobCrawl.pipelines.My51JobcrawlPipeline': 300,
-    'my51jobCrawl.pipelines.MyJobcrawlPipeline': 301,
+    'my51jobCrawl.pipelines.MyJobcrawlPipeline': 301, # 默认的pipeline
 }
 
 

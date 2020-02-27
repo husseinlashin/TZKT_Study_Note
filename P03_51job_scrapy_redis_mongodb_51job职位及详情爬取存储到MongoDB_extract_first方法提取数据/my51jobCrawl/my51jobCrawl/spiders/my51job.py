@@ -49,6 +49,7 @@ class My51jobSpider(CrawlSpider):
                 pass
 
             # 上面提取到的信息，加入到Item容器中，用于存储每一个工作的信息,给键进行赋值
+            # 此处的jobListItem就是item对象，只是进行了自定义重新取了一个名称，items.py里面默认的也是pass，然后自定义的item类
             jobListItem = JobListItem(jobName=jobName, jobLink=jobLink,
                                       jobCompany=jobCompany, jobAddress=jobAddress,
                                       jobDate=jobDate, jobSalary=jobSalary,
