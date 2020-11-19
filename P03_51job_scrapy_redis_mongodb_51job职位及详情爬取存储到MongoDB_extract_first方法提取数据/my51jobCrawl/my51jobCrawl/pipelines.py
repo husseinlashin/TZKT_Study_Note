@@ -14,7 +14,7 @@ from my51jobCrawl.items import JobListItem
 # 下载数据到MongoDB数据库jobList中
 # 下载ITEM中的数据到本地json文件中
 
-# 默认创建的管道，必须有默认的process_item方法
+# 该管道是默认创建的管道，必须有默认的process_item方法
 class My51JobcrawlPipeline(object):
 
     def __init__(self, mongo_uri, mongo_db, replicaset):
@@ -24,8 +24,12 @@ class My51JobcrawlPipeline(object):
         self.mongo_db = mongo_db
         self.replicaset = replicaset
 
-    @classmethod
     # 定义连接MongDB数据库的方法
+    # from_crawler：这是一个类方法，用 @classmethod 标识，是一种依赖注入的方式，
+    # 方法的参数就是 crawler，通过 crawler 这个参数我们可以拿到全局配置的每个配置信息，
+    # 在全局配置 settings.py 中我们可以定义 MONGO_URI 和 MONGO_DB 来指定 MongoDB 连接需要的地址和数据库名称，
+    # 拿到配置信息之后返回类对象即可。所以这个方法的定义主要是用来获取 settings.py 中的配置的。
+    @classmethod
     def from_crawler(cls, crawler):
         return cls(
             mongo_uri=crawler.settings.get("MONGO_URI"),
@@ -33,7 +37,7 @@ class My51JobcrawlPipeline(object):
             replicaset=crawler.settings.get('REPLICASET')
         )
 
-    # 爬虫开启时候执行该函数，仅执行一次，连接数据库
+    # 爬虫开启时候执行该函数，仅执行一次，连接数据库，主要进行了一些初始化操作
     def open_spider(self, spider):
         self.client = pymongo.MongoClient(self.mongo_uri, replicaset=self.replicaset)
         self.db = self.client[self.mongo_db]
@@ -42,6 +46,7 @@ class My51JobcrawlPipeline(object):
     def close_spider(self, spider):
         self.client.close()
 
+    # 最主要的 process_item 方法则执行了数据插入操作，插入具体执行步骤单独定义一个函数，此处进行调用即可
     def process_item(self, item, spider):
         # 判断传过来的item(就是爬虫里面的jobListItem，最后yield jobListItem)是否属于JobListItem对象
         # 因为我们spiders文件夹可能有多个爬虫，items.py中也会自定义多个item的类，因此此处先进行一下判断

@@ -12,7 +12,7 @@ proxies = {
 }
 
 url = 'https://www.hao123.com/'
-response = requests.get(url, proxies=proxies)  #verify=False是否验证服务器的SSL证书
+response = requests.get(url, proxies=proxies)  # 参数 verify=False 是否验证服务器的SSL证书
 
 print(response.status_code)
 print(response.headers)

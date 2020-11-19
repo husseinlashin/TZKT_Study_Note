@@ -107,7 +107,7 @@ USER_AGENTS = [
 
 
 # 使用scrapy_redis去重优化
-#使用scrapy_redis的中的调度器，注意运行爬虫前，启动本地的redis-server服务器
+#使用scrapy_redis的中的调度器，注意运行爬虫前，启动本地的redis-server服务器,在启动输入redis-cli客户端
 SCHEDULER = "scrapy_redis.scheduler.Scheduler"
 # （可选参数）数据是否持久化，程序停止数据保存，下次启动数据继续使用
 # 在Redis中保持scrapy-redis用到的各个队列，从而允许暂停和暂停后恢复
@@ -142,6 +142,20 @@ MONGO_URI = 'mongodb://127.0.0.1:1111,127.0.0.1:2222,127.0.0.1:3333'
 MONGO_DATABASE='51job'
 # 副本集名称，统一的的id
 REPLICASET = 'test'
+
+
+
+
+# 如果只是连接本地MongoDB默认数据库(数据直接存储本地MongoDBs数据库中)，不使用副本集，使用以下写法
+# 只需要将数据库接口改成mongodb默认端口即可，其它全部不变
+# MONGO_URI = 'mongodb://127.0.0.1:27017'
+# 虽然是使用默认的一个数据库，没有使用副本集，但是副本集还是要写上
+# 因为pipelines.py里面连接数据库需要副本集这个参数
+# 数据库名称
+# MONGO_DATABASE='51job'
+# 副本集名称，统一的的id
+# REPLICASET = 'test'
+
 
 
 
