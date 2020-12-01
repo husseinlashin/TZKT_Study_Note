@@ -24,7 +24,6 @@ from lxml import etree
 import re
 import user_agent
 
-
 class BtDownload():
 
     def __init__(self):
